@@ -8,6 +8,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { GeoTrackProvider } from '../providers/geo-track/geo-track';
+import { CaptureSensorsProvider } from '../providers/capture-sensors/capture-sensors';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { GeoTrackProvider } from '../providers/geo-track/geo-track';
     SplashScreen,
     Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    GeoTrackProvider
+    GeoTrackProvider,
+    CaptureSensorsProvider
   ]
 })
 export class AppModule {}
