@@ -1,0 +1,8 @@
+{
+  "name": "gps-app",
+  "app_id": "92b92145",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
