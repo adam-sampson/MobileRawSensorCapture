@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { GeoTrackProvider } from '../providers/geo-track/geo-track';
 import { CaptureSensorsProvider } from '../providers/capture-sensors/capture-sensors';
+import { SqliteDataProvider } from '../providers/sqlite-data/sqlite-data';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CaptureSensorsProvider } from '../providers/capture-sensors/capture-sen
     Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GeoTrackProvider,
-    CaptureSensorsProvider
+    CaptureSensorsProvider,
+    SqliteDataProvider
   ]
 })
 export class AppModule {}
