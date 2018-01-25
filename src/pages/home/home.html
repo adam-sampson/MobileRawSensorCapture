@@ -10,21 +10,27 @@
   <p>Current Status: Preparing to collect GPS points for time series analysis.</p>
   <br />
   <div class="gps_data">
+    <!--
     <div>Current Latitude: {{this.geo.lat}}</div>
     <div>Current Longitude: {{this.geo.lon}}</div>
     <div>Accuracy: {{this.geo.xy_acc}}</div>
+    -->
   </div>
   <br />
   <div class="gps_data">
+    <!--
     <div>Current Altitude: {{this.geo.alt}}</div>
     <div>Alt Accuracy: {{this.geo.z_acc}}</div>
+    -->
   </div>
   <br />
-  <button ion-button block primary (click)="gpsOnce()">Get GPS Once</button>
+  <button ion-button block primary (click)="gpsOnce()">Get Sensors Once</button>
   <br />
+  <!--
   <button ion-button block primary (click)="startGpsWatch()">Watch GPS</button>
   <button ion-button block primary (click)="stopGpsWatch()">Unwatch GPS</button>
   <br />
   <button ion-button block primary (click)="startGpsInterval()">Start GPS Interval</button>
   <button ion-button block primary (click)="stopGpsInterval()">Stop GPS Interval</button>
+  -->
 </ion-content>
