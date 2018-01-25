@@ -12,10 +12,10 @@ import { EmailComposer } from '@ionic-native/email-composer';
 @Injectable()
 export class SqliteDataProvider {
 
-  public sqliteConfig: {
-    name: 'data.db',
-    location: 'default'
-  };
+  // public sqliteConfig: {
+  //   name: 'data.db',
+  //   location: 'default'
+  // };
 
   constructor(private sqlite: SQLite) {
     console.log('Hello SqliteDataProvider Provider');
@@ -51,7 +51,7 @@ export class SqliteDataProvider {
 
   insertSqlData(timestamp, gpsHoriz, gpsHorizAcc, gpsVert, gpsVertAcc, accelX,
     accelY, accelZ, magHead, trueHead, headAcc) {
-    return this.sqlite.create(sqliteConfig)
+    return this.sqlite.create({name: 'data.db',location: 'default'})
       .then((db: SQLiteObject) => {
         db.executeSql('INSERT INTO SensorDataTable VALUE (?,?,?,?,?,?,?,?,?,?,?)', 
           [timestamp, gpsHoriz, gpsHorizAcc, gpsVert, gpsVertAcc, accelX,
